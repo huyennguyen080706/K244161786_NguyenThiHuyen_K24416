@@ -1,16 +1,8 @@
 # BW08 Nguyễn Thị Huyền K244161786
 
-Bài Phát triển Web kinh doanh, lớp K24416. HTML5, CSS, JavaScript thuần; không cần cài thư viện hay build.
+Bài Phát triển Web kinh doanh, lớp K24416.
 
-## Chạy website
 
-Mở thư mục này trong VS Code, dùng **Live Server** mở `index.html`. Hoặc chạy `python -m http.server 8000` tại thư mục gốc rồi truy cập `http://localhost:8000/`. Không mở bằng `file://` vì các tệp XML/JSON được đọc bằng AJAX.
-
-- `index.html`: danh sách, tìm kiếm, xem nhanh, đánh giá, giỏ hàng và thanh toán giả lập.
-- `admin.html`: đăng nhập, quản lý đơn, thống kê và tồn kho giả lập.
-- `kiemthu.html`: chạy kiểm thử hành vi trong trình duyệt và tải nhật ký JSON.
-- `docs/HUONG-DAN.md`: giải thích cách làm từng câu và các thao tác tự kiểm chứng.
-- `docs/BW08-test-results.json`: kết quả lần kiểm thử thực tế trên localhost.
 
 ## Tài khoản thử nghiệm
 
