@@ -1,0 +1,45 @@
+# Huong dan va cau hinh tro ly, khong thuoc bai nop
+.agents/
+.codex/
+.local/
+AGENTS.md
+AGENTS.md.md
+
+# Cau hinh may ca nhan va thong tin bi mat
+.aws/
+.env
+.env.*
+!.env.example
+
+# Cau hinh IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Tep he thong
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Tep tam, ban sao luu va nhat ky
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*.swo
+*~
+~$*
+*.log
+
+# Thu vien cai tu dong va cache cong cu
+node_modules/
+.npm/
+.cache/
+__pycache__/
+*.pyc
+
+# Goi nen tai lieu/ma mau; nop cac tep bai lam da giai nen
+*.zip
+*.rar
+*.7z

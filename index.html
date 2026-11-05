@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Huyền Select — cửa hàng mô phỏng môn Phát triển Web kinh doanh, đề BW08.">
+    <title>Huyền Select | Bộ sưu tập mỗi ngày</title>
+    <link rel="icon" href="images/mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/common.js" defer></script>
+    <script src="js/store.js" defer></script>
+</head>
+<body>
+    <div class="top-note">BW08 · CỬA HÀNG MÔ PHỎNG <span>Những lựa chọn nhỏ, cho mỗi ngày.</span></div>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Huyền Select trang chủ"><img src="images/mark.svg" alt="" width="36" height="36"><span>huyền<span class="brand-sub">SELECT</span></span></a>
+        <nav aria-label="Điều hướng chính"><a href="#catalog" class="active">Khám phá</a><a href="admin.html">Quản trị</a><a href="docs/HUONG-DAN.md">Hướng dẫn</a></nav>
+        <div class="header-actions"><button id="customerButton" class="text-button">Đăng nhập</button><div class="cart-anchor"><button id="cartToggle" class="cart-toggle" aria-expanded="false" aria-controls="miniCart">Giỏ hàng <span id="cartCount" class="count">0</span></button>
+            <section id="miniCart" class="mini-cart" aria-label="Giỏ hàng của bạn" hidden><div class="panel-heading"><h2>Giỏ hàng của bạn</h2><button id="closeCart" class="icon-button" aria-label="Đóng giỏ hàng">×</button></div><div id="cartItems"></div><div class="cart-total"><span>Tạm tính</span><strong id="cartTotal">$0.00</strong></div><p class="hint">Giá USD theo API · Không thu tiền thật.</p><button id="checkoutButton" class="primary wide" disabled>Thanh toán →</button></section>
+        </div></div>
+    </header>
+    <main>
+        <section class="hero" aria-labelledby="heroTitle"><div><p class="eyebrow">THE EVERYDAY COLLECTION / 2026</p><h1 id="heroTitle">Chọn điều bạn thích.<br><em>Sống theo cách bạn yêu.</em></h1><p>Từ trang phục, phụ kiện đến công nghệ.<br>Khám phá những món đồ đồng hành cùng bạn mỗi ngày.</p><a class="primary inline-button" href="#catalog">Khám phá bộ sưu tập <span>↘</span></a></div><div class="hero-art" aria-hidden="true"><span class="art-circle"></span><span class="art-line"></span><span class="art-label">curated for<br><i>your everyday.</i></span><span class="art-number">20<span>lựa chọn</span></span></div></section>
+        <section id="catalog" class="catalog" aria-labelledby="catalogTitle">
+            <div class="catalog-heading"><div><p class="eyebrow">TÌM MỘT CHÚT CẢM HỨNG</p><h2 id="catalogTitle">Bộ sưu tập của chúng mình<span class="dot">.</span></h2></div><span id="resultCount" class="hint" aria-live="polite">Đang tải sản phẩm…</span></div>
+            <div class="shop-layout">
+                <aside class="filters" aria-labelledby="filterTitle"><div class="panel-heading"><h3 id="filterTitle">Bộ lọc</h3><button type="reset" form="searchForm" class="text-button">Đặt lại</button></div>
+                    <form id="searchForm">
+                        <label for="searchText">Tìm sản phẩm</label><input id="searchText" type="search" maxlength="100" placeholder="Tên sản phẩm…">
+                        <label for="category">Danh mục</label><select id="category"><option value="">Tất cả danh mục</option></select>
+                        <fieldset><legend>Khoảng giá (USD)</legend><div class="price-range"><label class="sr-only" for="minPrice">Giá từ</label><input id="minPrice" type="number" min="0" max="100000" step="0.01" placeholder="Từ"><span>–</span><label class="sr-only" for="maxPrice">Giá đến</label><input id="maxPrice" type="number" min="0" max="100000" step="0.01" placeholder="Đến"></div></fieldset>
+                        <label for="color">Màu sắc</label><select id="color"><option value="">Tất cả màu</option><option value="black">Đen</option><option value="cream">Kem</option></select>
+                        <label for="minRating">Đánh giá từ XML</label><input id="minRating" type="range" min="0" max="5" step="0.5" value="0"><output id="ratingValue" for="minRating">Tất cả mức sao</output>
+                        <label for="sortBy">Sắp xếp</label><select id="sortBy"><option value="default">Theo bộ sưu tập</option><option value="priceAsc">Giá tăng dần</option><option value="priceDesc">Giá giảm dần</option><option value="rating">Đánh giá cao nhất</option></select>
+                        <p id="filterError" class="field-error" role="alert"></p><button class="primary wide" type="submit">Áp dụng bộ lọc</button>
+                    </form>
+                    <div class="filter-foot"><span class="tiny-star">✳</span><p>Chọn đúng màu và kích cỡ<br>trước khi thêm vào giỏ.</p></div>
+                </aside>
+                <div class="catalog-content"><div class="data-bar"><p id="dataStatus" role="status">Đang kết nối Fake Store API…</p><div><button id="reloadApi" class="text-button">Tải lại API</button><button id="downloadXml" class="text-button" disabled>Tải products.xml ↓</button></div></div><p id="reviewStatus" class="hint"></p><div id="productGrid" class="product-grid" aria-busy="true"></div><div id="emptyState" class="empty-state" hidden><h3>Chưa tìm thấy món đồ phù hợp</h3><p>Thử thay đổi khoảng giá, danh mục hoặc đánh giá nhé.</p><button id="resetFilters" class="secondary">Xóa bộ lọc</button></div></div>
+            </div>
+        </section>
+        <section class="bottom-note"><span>01 / Khám phá</span><p>Một nơi nhỏ.<br><em>Nhiều lựa chọn dành cho bạn.</em></p><span>HUYỀN SELECT © 2026</span></section>
+    </main>
+    <footer class="site-footer"><p>Nguyễn Thị Huyền · K244161786 · K24416</p><p>BW08 · Phát triển Web kinh doanh <a href="admin.html">Trang quản trị ↗</a></p></footer>
+    <dialog id="quickDialog" class="quick-dialog"><button class="dialog-close icon-button" data-close="quickDialog" aria-label="Đóng xem nhanh">×</button><div id="quickContent"></div></dialog>
+    <dialog id="ratingDialog"><div class="panel-heading"><h2>Rating Detail</h2><button class="icon-button" data-close="ratingDialog" aria-label="Đóng đánh giá">×</button></div><p class="hint">Đánh giá từ reviews.xml — dữ liệu giả lập.</p><div id="ratingContent"></div></dialog>
+    <dialog id="loginDialog"><div class="panel-heading"><h2>Chào bạn quay lại</h2><button class="icon-button" data-close="loginDialog" aria-label="Đóng đăng nhập">×</button></div><p class="hint">Tài khoản khách hàng mô phỏng: khach@bw08.test / KhachBW08!</p><form id="customerLogin"><label for="customerEmail">Email</label><input id="customerEmail" type="email" required autocomplete="username"><label for="customerPassword">Mật khẩu mô phỏng</label><input id="customerPassword" type="password" required autocomplete="current-password"><p id="loginError" class="field-error" role="alert"></p><button class="primary wide">Đăng nhập</button></form></dialog>
+    <dialog id="checkoutDialog"><div class="panel-heading"><h2>Thông tin giao hàng</h2><button class="icon-button" data-close="checkoutDialog" aria-label="Đóng thanh toán">×</button></div><p class="hint">Thanh toán giả lập · Không gửi thông tin đến API sản phẩm.</p><form id="checkoutForm" novalidate><label for="fullName">Họ tên người nhận</label><input id="fullName" required minlength="2" maxlength="80" autocomplete="name"><p id="fullNameError" class="field-error"></p><label for="phone">Số điện thoại Việt Nam</label><input id="phone" type="tel" required pattern="(0|\+84)(3|5|7|8|9)[0-9]{8}" placeholder="0901234567" autocomplete="tel" aria-describedby="phoneError"><p id="phoneError" class="field-error"></p><label for="email">Email</label><input id="email" type="email" required maxlength="120" autocomplete="email" aria-describedby="emailError"><p id="emailError" class="field-error"></p><label for="address">Địa chỉ giao hàng</label><textarea id="address" required minlength="8" maxlength="300" autocomplete="street-address"></textarea><p id="addressError" class="field-error"></p><div class="cart-total"><span>Tổng thanh toán</span><strong id="checkoutTotal"></strong></div><p id="checkoutStatus" role="status"></p><button id="placeOrder" class="primary wide">Xác nhận thanh toán giả lập</button></form></dialog>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <noscript><p class="empty-state">Cần bật JavaScript để đọc sản phẩm, đánh giá và sử dụng giỏ hàng.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "source": "https://fakestoreapi.com/products",
+  "capturedAt": "2026-11-05T13:38:21+07:00",
+  "method": "Chrome trực tiếp mở URL API, Ctrl+S lưu products.json, sao chép nguyên phản hồi vào api-products.json.",
+  "productCount": 20,
+  "realFields": [
+    "id",
+    "title",
+    "price",
+    "description",
+    "category",
+    "image",
+    "rating"
+  ],
+  "simulationFields": [
+    "variants.color",
+    "variants.size",
+    "variants.stock"
+  ],
+  "simulationFiles": [
+    "employees.json",
+    "customers.json",
+    "carts.xml",
+    "reviews.xml"
+  ],
+  "note": "Bản lưu API không phải dữ liệu trực tiếp ở lần mở sau. Website ghi rõ nguồn đang dùng. Giá giữ USD."
+}

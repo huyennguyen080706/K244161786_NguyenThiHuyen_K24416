@@ -1,0 +1,8 @@
+{
+    "source": "simulation",
+    "customers": [
+        { "id": "KH01", "name": "Khách hàng mẫu An", "email": "khach@bw08.test", "password": "KhachBW08!", "phone": "0901234567", "address": "Địa chỉ giao hàng mô phỏng, TP Hồ Chí Minh" },
+        { "id": "KH02", "name": "Khách hàng mẫu Bình", "email": "binh@example.com", "password": "BinhBW08!", "phone": "0912345678", "address": "Địa chỉ mô phỏng số 2, TP Hồ Chí Minh" },
+        { "id": "KH03", "name": "Khách hàng mẫu Chi", "email": "chi@example.com", "password": "ChiBW08!", "phone": "0987654321", "address": "Địa chỉ mô phỏng số 3, TP Hồ Chí Minh" }
+    ]
+}

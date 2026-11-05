@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carts source="simulation">
+  <order id="HD-MAU-001">
+    <date>2026-11-02T09:00:00+07:00</date>
+    <employee_id>NV01</employee_id>
+    <customer_id>KH01</customer_id>
+    <customer_name>Khách hàng mẫu An</customer_name>
+    <email>khach@bw08.test</email>
+    <phone>0901234567</phone>
+    <address>Địa chỉ giao hàng mô phỏng, TP Hồ Chí Minh</address>
+    <status>delivered</status>
+    <items>
+      <item product_id="1" variant_id="black-M"><title>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</title><color_name>Đen</color_name><size>M</size><quantity>2</quantity><price>109.95</price></item>
+      <item product_id="2" variant_id="cream-L"><title>Mens Casual Premium Slim Fit T-Shirts </title><color_name>Kem</color_name><size>L</size><quantity>1</quantity><price>22.3</price></item>
+    </items>
+  </order>
+  <order id="HD-MAU-002">
+    <date>2026-11-03T10:00:00+07:00</date>
+    <employee_id>NV02</employee_id>
+    <customer_id>KH02</customer_id>
+    <customer_name>Khách hàng mẫu Bình</customer_name>
+    <email>binh@example.com</email>
+    <phone>0912345678</phone>
+    <address>Địa chỉ mô phỏng số 2, TP Hồ Chí Minh</address>
+    <status>processing</status>
+    <items>
+      <item product_id="9" variant_id="black-Standard"><title>WD 2TB Elements Portable External Hard Drive - USB 3.0 </title><color_name>Đen</color_name><size>Standard</size><quantity>1</quantity><price>64</price></item>
+    </items>
+  </order>
+  <order id="HD-MAU-003">
+    <date>2026-11-04T11:00:00+07:00</date>
+    <employee_id>NV01</employee_id>
+    <customer_id>KH03</customer_id>
+    <customer_name>Khách hàng mẫu Chi</customer_name>
+    <email>chi@example.com</email>
+    <phone>0987654321</phone>
+    <address>Địa chỉ mô phỏng số 3, TP Hồ Chí Minh</address>
+    <status>pending</status>
+    <items>
+      <item product_id="18" variant_id="cream-M"><title>MBJ Women&apos;s Solid Short Sleeve Boat Neck V </title><color_name>Kem</color_name><size>M</size><quantity>2</quantity><price>9.85</price></item>
+    </items>
+  </order>
+  <order id="HD-MAU-004">
+    <date>2026-11-01T08:00:00+07:00</date>
+    <employee_id>NV02</employee_id>
+    <customer_id>KH01</customer_id>
+    <customer_name>Khách hàng mẫu An</customer_name>
+    <email>khach@bw08.test</email>
+    <phone>0901234567</phone>
+    <address>Địa chỉ giao hàng mô phỏng, TP Hồ Chí Minh</address>
+    <status>cancelled</status>
+    <items>
+      <item product_id="5" variant_id="black-Standard"><title>John Hardy Women&apos;s Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</title><color_name>Đen</color_name><size>Standard</size><quantity>1</quantity><price>695</price></item>
+    </items>
+  </order>
+</carts>

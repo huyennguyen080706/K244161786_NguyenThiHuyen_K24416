@@ -1,0 +1,8 @@
+{
+    "source": "simulation",
+    "note": "Tài khoản học tập công khai, không phải xác thực máy chủ.",
+    "employees": [
+        { "id": "NV01", "name": "Quản trị mô phỏng", "email": "admin@bw08.test", "password": "AdminBW08!", "role": "admin" },
+        { "id": "NV02", "name": "Nhân viên mô phỏng", "email": "staff@bw08.test", "password": "StaffBW08!", "role": "staff" }
+    ]
+}

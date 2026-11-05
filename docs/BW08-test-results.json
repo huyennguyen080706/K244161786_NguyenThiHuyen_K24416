@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "startedAt": "2026-11-05T06:56:07.546Z",
+    "origin": "http://127.0.0.1:8080",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "note": "Dữ liệu thử giả lập; kiểm thử tự động trong iframe cùng origin.",
+    "dataSource": "API trực tiếp · 20 sản phẩm · 13:56:12. Màu/size/tồn kho giả lập.",
+    "finishedAt": "2026-11-05T06:56:14.495Z"
+  },
+  "results": [
+    {
+      "id": "TC01",
+      "question": 3,
+      "name": "Skeleton trước dữ liệu",
+      "status": "Đã chạy đạt",
+      "actual": "Quan sát 8 skeleton và animation shimmer trước khi API hoàn tất."
+    },
+    {
+      "id": "TC02",
+      "question": 1,
+      "name": "Đọc nguồn và XML sản phẩm",
+      "status": "Đã chạy đạt",
+      "actual": "API trực tiếp · 20 sản phẩm · 13:56:12. Màu/size/tồn kho giả lập."
+    },
+    {
+      "id": "TC03",
+      "question": 2,
+      "name": "Semantic HTML5 và form",
+      "status": "Đã chạy đạt",
+      "actual": "Đủ thẻ ngữ nghĩa, input giá/rating và dropdown danh mục."
+    },
+    {
+      "id": "TC04",
+      "question": 3,
+      "name": "Responsive 4/2/1 cột",
+      "status": "Đã chạy đạt",
+      "actual": "1280px → 4 cột; 800px → 2; 390px → 1. Không tràn ngang."
+    },
+    {
+      "id": "TC05",
+      "question": 2,
+      "name": "Lọc kết hợp và khoảng giá sai",
+      "status": "Đã chạy đạt",
+      "actual": "Lọc giá 10–30: 5 sản phẩm; chặn khoảng giá ngược; truy vấn không khớp hiển thị rỗng."
+    },
+    {
+      "id": "TC06",
+      "question": 5,
+      "name": "Điểm trung bình XML và Rating Detail",
+      "status": "Đã chạy đạt",
+      "actual": "(5+4+4)/3 = 4.3; Rating Detail có KH01, KH02, KH03."
+    },
+    {
+      "id": "TC07",
+      "question": 4,
+      "name": "Delegation và Xem nhanh",
+      "status": "Đã chạy đạt",
+      "actual": "Click nút được bắt tại productGrid, mở đúng sản phẩm qua data-id/data-variant."
+    },
+    {
+      "id": "TC08",
+      "question": 6,
+      "name": "Gộp cùng biến thể, tách biến thể khác",
+      "status": "Đã chạy đạt",
+      "actual": "Đen/M ×2, Kem/M ×1; 2 dòng, 3 món, $329.85; mini-cart absolute."
+    },
+    {
+      "id": "TC09",
+      "question": 6,
+      "name": "Giới hạn tồn kho và lưu giỏ",
+      "status": "Đã chạy đạt",
+      "actual": "Không vượt 5 món Đen/M; restoreCart đọc đúng LocalStorage. Chuẩn bị giỏ ×2 cho checkout."
+    },
+    {
+      "id": "TC10",
+      "question": 7,
+      "name": "Validation trực tiếp",
+      "status": "Đã chạy đạt",
+      "actual": "123/sai-email có lỗi ngay khi nhập; +84901234567 và kiemthu@example.com hợp lệ."
+    },
+    {
+      "id": "TC11",
+      "question": 7,
+      "name": "Thanh toán giả lập, chống bấm lặp",
+      "status": "Đã chạy đạt",
+      "actual": "Lưu đúng 1 đơn ×2, tổng $219.90, paymentMode=simulation; giỏ trống; không POST đến API sản phẩm."
+    },
+    {
+      "id": "TC12",
+      "question": 5,
+      "name": "XML sai và dữ liệu rỗng",
+      "status": "Đã chạy đạt",
+      "actual": "DOMParser phát hiện XML sai; XML rỗng trả danh sách đánh giá rỗng."
+    },
+    {
+      "id": "TC13",
+      "question": 8,
+      "name": "Đăng nhập ADMIN",
+      "status": "Đã chạy đạt",
+      "actual": "Staff bị từ chối; ADMIN mở dashboard."
+    },
+    {
+      "id": "TC14",
+      "question": 8,
+      "name": "Đơn và thống kê doanh thu",
+      "status": "Đã chạy đạt",
+      "actual": "Ban đầu 5 đơn, đã giao $242.20/3 món; giao đơn mới → $462.10/5 món."
+    },
+    {
+      "id": "TC15",
+      "question": 8,
+      "name": "Hủy đơn và cập nhật tồn kho",
+      "status": "Đã chạy đạt",
+      "actual": "Hủy đơn → doanh thu $242.20, tồn Đen/M trở về 5; đăng xuất ẩn dashboard."
+    },
+    {
+      "id": "TC16",
+      "question": 9,
+      "name": "GitHub Pages",
+      "status": "Chưa kiểm chứng",
+      "actual": "Kiểm tra sau khi xuất bản; kết quả localhost không thay thế Pages."
+    }
+  ]
+}
